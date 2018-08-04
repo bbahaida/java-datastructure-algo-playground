@@ -3,7 +3,7 @@ package sorting;
 import Utils.Utils;
 
 public class SelectionSort {
-    // unstable O(n^2)
+    // unstable O(n^2) better than bubble because of the number of swaps
     public static int[] selectionSort(int [] arr){
         int index;
 

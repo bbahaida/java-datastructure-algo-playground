@@ -1,5 +1,7 @@
 package sorting;
 
+import Performence.Timeit;
+import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
@@ -7,37 +9,47 @@ import static org.junit.Assert.*;
 
 public class SortingTest {
 
+    int[] entry     = {20,35,-15,7,55,1,-22,43,45,67,-25,77,9,-1};
+    int[] expecteds = {-25,-22,-15,-1,1,7,9,20,35,43,45,55,67,77};
+
     @Test
     public void testBubbleSort(){
         // arrange
 
-        int[] entry = {20,35,-15,7,55,1,-22};
-        int[] expecteds = {-22,-15,1,7,20,35,55};
         // act
-        int[] actueles = BubbleSort.bubbleSort(entry);
+        int[] actuales = BubbleSort.bubbleSort(entry);
         // assert
-        assertArrayEquals(expecteds,actueles);
+        assertArrayEquals(expecteds,actuales);
     }
 
     @Test
     public void testSelectionSort(){
         // arrange
-        int[] entry = {20,35,-15,7,55,1,-22};
-        int[] expecteds = {-22,-15,1,7,20,35,55};
+
         // act
-        int[] actueles = SelectionSort.selectionSort(entry);
+        int[] actuales = SelectionSort.selectionSort(entry);
         // assert
-        assertArrayEquals(expecteds,actueles);
+        assertArrayEquals(expecteds,actuales);
     }
     @Test
     public void testInsertionSort(){
         // arrange
 
-        int[] entry = {20,35,-15,7,55,1,-22};
-        int[] expecteds = {-22,-15,1,7,20,35,55};
         // act
-        int[] actueles = InsertionSort.insertionSort(entry);
+        int[] actuales = InsertionSort.insertionSort(entry);
         // assert
-        assertArrayEquals(expecteds,actueles);
+        assertArrayEquals(expecteds,actuales);
     }
+
+    @Test
+    public void testShellSort(){
+        // arrange
+
+        // act
+        int[] actuales = ShellSort.shellsort(entry);
+        // assert
+        assertArrayEquals(expecteds,actuales);
+    }
+
+
 }
