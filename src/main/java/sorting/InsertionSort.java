@@ -1,15 +1,20 @@
 package sorting;
 
-public class InsertionSort {
-
+/**
+ * @author Brahim Bahaida
+ */
+public final class InsertionSort {
+    /**
+     * private constructor
+     */
     private InsertionSort(){
 
     }
 
     /**
      *
-     * @param arr
-     * @return
+     * @param arr to be sorted
+     * @return sorted array
      */
 
     // stable O(n^2)

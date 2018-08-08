@@ -1,14 +1,17 @@
 package arrays;
 
-public class Array {
+/**
+ *
+ */
+public final class Array {
 
     /**
      *
-     * @param args
+     * @param args params from user
      */
 
     public static void main(final String[] args) {
-        int[] array = {20,35,-15,7,55,1,-22};
+        //int[] array = {20, 35, -15, 7, 55, 1, -22};
 
         /*System.out.println("Bubble Sort");
         Timeit.code(()-> BubbleSort.bubbleSort(array));
@@ -28,6 +31,10 @@ public class Array {
         System.out.println("###########################");*/
 
     }
+
+    /**
+     * private constructor
+     */
 
     private Array(){
 

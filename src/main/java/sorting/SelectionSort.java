@@ -2,16 +2,21 @@ package sorting;
 
 import utils.Utils;
 
-public class SelectionSort {
-
+/**
+ * @author Brahim Bahaida
+ */
+public final class SelectionSort {
+    /**
+     * private constructor
+     */
     private SelectionSort(){
 
     }
 
     /**
      *
-     * @param arr
-     * @return
+     * @param arr to be sorted
+     * @return sorted array
      */
 
     // unstable O(n^2) better than bubble because of the number of swaps

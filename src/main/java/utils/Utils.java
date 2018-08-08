@@ -1,6 +1,6 @@
 package utils;
 
-public class Utils {
+public final class Utils {
 
     private Utils(){
 
@@ -8,9 +8,9 @@ public class Utils {
 
     /**
      *
-     * @param arr
-     * @param i
-     * @param j
+     * @param arr to be swapped
+     * @param i first index
+     * @param j second index
      */
 
     public static void swap(final int[] arr, final int i, final int j) {

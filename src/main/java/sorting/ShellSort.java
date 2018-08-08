@@ -1,15 +1,20 @@
 package sorting;
 
-public class ShellSort {
-
+/**
+ * @author Brahim Bahaida
+ */
+public final class ShellSort {
+    /**
+     * private constructor
+     */
     private ShellSort(){
 
     }
 
     /**
      *
-     * @param arr
-     * @return
+     * @param arr to be sorted
+     * @return sorted array
      */
 
     public static int[] shellsort(final int[] arr){

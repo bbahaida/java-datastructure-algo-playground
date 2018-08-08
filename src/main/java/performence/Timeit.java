@@ -1,10 +1,13 @@
 package performence;
 
-public class Timeit {
+/**
+ *
+ */
+public final class Timeit {
 
     /**
      *
-     * @param block
+     * @param block code to be executed
      * @return Time of execution
      */
 
@@ -17,6 +20,10 @@ public class Timeit {
             return (end-start)/1.0e9;
         }
     }
+
+    /**
+     * private constructor
+     */
 
     private Timeit(){
 

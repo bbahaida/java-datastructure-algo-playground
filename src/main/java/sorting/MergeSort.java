@@ -1,15 +1,20 @@
 package sorting;
 
-public class MergeSort {
-
+/**
+ * @author Brahim Bahaida
+ */
+public final class MergeSort {
+    /**
+     * private constructor
+     */
     private MergeSort(){
 
     }
 
     /**
      *
-     * @param arr
-     * @return
+     * @param arr to be sorted
+     * @return sorted array
      */
 
     public static int[] mergeSort(final int[] arr) {

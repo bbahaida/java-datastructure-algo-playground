@@ -5,19 +5,25 @@ import java.util.List;
 import java.util.PriorityQueue;
 import java.util.Queue;
 
-public class Braille {
+/**
+ * @author Brahim Bahaida
+ */
+public final class Braille {
 
     private final static int BRAILLE_LENGTH = 6;
     private final static int BRAILLE_RANGE_2_INDEX = 2;
     private final static int BRAILLE_RANGE_3_INDEX = 5;
 
+    /**
+     * private constructor
+     */
     private Braille(){
 
     }
 
     /**
      *
-     * @param args
+     * @param args from user
      */
 
     public static void main(final String[] args) {
@@ -35,7 +41,7 @@ public class Braille {
 
     /**
      *
-     * @param braille
+     * @param braille to decode
      *
      */
 
@@ -65,7 +71,7 @@ public class Braille {
 
     /**
      *
-     * @param braille
+     * @param braille to decode
      * @return braille corresponded char
      */
 

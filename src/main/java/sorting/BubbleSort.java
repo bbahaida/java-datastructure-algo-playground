@@ -2,8 +2,14 @@ package sorting;
 
 import utils.Utils;
 
-public class BubbleSort {
+/**
+ * @author Brahim Bahaida
+ */
+public final class BubbleSort {
 
+    /**
+     * private constructor
+     */
     private BubbleSort(){
 
     }
@@ -11,8 +17,8 @@ public class BubbleSort {
 
     /**
      *
-     * @param arr
-     * @return
+     * @param arr to be sorted
+     * @return sorted array
      */
 
     // stable O(n^2)
