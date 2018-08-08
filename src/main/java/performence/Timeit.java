@@ -1,7 +1,7 @@
 package performence;
 
 /**
- *
+ * @author Brahim Bahaida
  */
 public final class Timeit {
 
@@ -11,21 +11,21 @@ public final class Timeit {
      * @return Time of execution
      */
 
-    public static double code(final Runnable block){
+    public static double code(final Runnable block) {
         long start = System.nanoTime();
-        try{
+        try {
             block.run();
-        }finally {
+        } finally {
             long end = System.nanoTime();
             return (end-start)/1.0e9;
         }
     }
 
     /**
-     * private constructor
+     * private constructor.
      */
 
-    private Timeit(){
+    private Timeit() {
 
     }
 

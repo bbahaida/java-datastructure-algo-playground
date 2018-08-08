@@ -5,9 +5,9 @@ package sorting;
  */
 public final class ShellSort {
     /**
-     * private constructor
+     * private constructor.
      */
-    private ShellSort(){
+    private ShellSort() {
 
     }
 
@@ -17,14 +17,14 @@ public final class ShellSort {
      * @return sorted array
      */
 
-    public static int[] shellsort(final int[] arr){
+    public static int[] shellsort(final int[] arr) {
 
-        for (int gap = arr.length / 2; gap > 0; gap /= 2){
+        for (int gap = arr.length / 2; gap > 0; gap /= 2) {
 
-            for (int i = gap; i < arr.length; i++){
+            for (int i = gap; i < arr.length; i++) {
                 int newElement = arr[i];
                 int j = i;
-                while (j >= gap && arr[j - gap] > newElement){
+                while (j >= gap && arr[j - gap] > newElement) {
                     arr[j] = arr[j-gap];
                     j-=gap;
                 }
@@ -32,7 +32,6 @@ public final class ShellSort {
             }
 
         }
-
         return arr;
     }
 }

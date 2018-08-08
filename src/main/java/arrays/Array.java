@@ -1,7 +1,7 @@
 package arrays;
 
 /**
- *
+ * @author Brahim Bahaida
  */
 public final class Array {
 
@@ -33,10 +33,10 @@ public final class Array {
     }
 
     /**
-     * private constructor
+     * private constructor.
      */
 
-    private Array(){
+    private Array() {
 
     }
 

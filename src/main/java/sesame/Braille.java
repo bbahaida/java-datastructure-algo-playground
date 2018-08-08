@@ -15,9 +15,9 @@ public final class Braille {
     private final static int BRAILLE_RANGE_3_INDEX = 5;
 
     /**
-     * private constructor
+     * private constructor.
      */
-    private Braille(){
+    private Braille() {
 
     }
 
@@ -45,13 +45,13 @@ public final class Braille {
      *
      */
 
-    private static void decode(final String braille){
-        if(braille.length()%BRAILLE_LENGTH != 0){
+    private static void decode(final String braille) {
+        if(braille.length()%BRAILLE_LENGTH != 0) {
             System.err.println("error");
             return;
         }
         List<String> data = new ArrayList<>();
-        for (int i = BRAILLE_LENGTH; i<=braille.length(); i+=BRAILLE_LENGTH){
+        for (int i = BRAILLE_LENGTH; i<=braille.length(); i+=BRAILLE_LENGTH) {
             data.add(braille.substring(i - BRAILLE_LENGTH, i));
         }
         StringBuilder word = new StringBuilder();
@@ -75,16 +75,16 @@ public final class Braille {
      * @return braille corresponded char
      */
 
-    private static char fromBrailleToAlphabet(final String braille){
+    private static char fromBrailleToAlphabet(final String braille) {
         if (braille.length() != BRAILLE_LENGTH) {
             return '0';
         }
         if (braille.equals("-*-***") ) {
             return 'w';
         }
-        if(braille.charAt(BRAILLE_RANGE_2_INDEX) == '*'){
-            if(braille.charAt(BRAILLE_RANGE_3_INDEX) == '*'){
-                switch (braille){
+        if(braille.charAt(BRAILLE_RANGE_2_INDEX) == '*') {
+            if(braille.charAt(BRAILLE_RANGE_3_INDEX) == '*') {
+                switch (braille) {
                     case "*-*--*" :
                         return 'u';
                     case "***--*" :
@@ -97,7 +97,7 @@ public final class Braille {
                         return 'z';
                     default: return '0';
                 }
-            }else {
+            } else {
                 switch (braille){
                     case "*-*---" :
                         return 'k';
@@ -122,8 +122,8 @@ public final class Braille {
                     default: return '0';
                 }
             }
-        }else {
-            switch (braille){
+        } else {
+            switch (braille) {
                 case "*-----" :
                     return 'a';
                 case "**----" :

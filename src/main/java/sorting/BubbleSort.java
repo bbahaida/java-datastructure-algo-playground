@@ -8,7 +8,7 @@ import utils.Utils;
 public final class BubbleSort {
 
     /**
-     * private constructor
+     * private constructor.
      */
     private BubbleSort(){
 

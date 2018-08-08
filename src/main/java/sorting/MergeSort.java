@@ -5,9 +5,9 @@ package sorting;
  */
 public final class MergeSort {
     /**
-     * private constructor
+     * private constructor.
      */
-    private MergeSort(){
+    private MergeSort() {
 
     }
 
@@ -24,12 +24,12 @@ public final class MergeSort {
 
     /**
      *
-     * @param input
-     * @param start
-     * @param end
+     * @param input array
+     * @param start index
+     * @param end index
      */
 
-    private static void partitionPhase(final int[] input, final int start, final int end){
+    private static void partitionPhase(final int[] input, final int start, final int end) {
         if(end - start < 2)
             return;
         int mid = (start+end)/2;
@@ -40,25 +40,24 @@ public final class MergeSort {
 
     /**
      *
-     * @param input
-     * @param start
-     * @param mid
-     * @param end
+     * @param input array
+     * @param start index
+     * @param mid index
+     * @param end index
      */
-    private static void mergePhase(final int[] input, final int start, final int mid, final int end){
-        if(input[mid - 1] <= input[mid])
+    private static void mergePhase(final int[] input, final int start, final int mid, final int end) {
+        if(input[mid - 1] <= input[mid]) {
             return;
+        }
         int i = start;
         int j = mid;
         int tempIndex = 0;
-        int[] temp = new int[end -start];
-        while (i < mid && j < end){
+        int[] temp = new int[end - start];
+        while (i < mid && j < end) {
             temp[tempIndex++] = input[i] <= input[j] ? input[i++] : input[j++];
         }
 
         System.arraycopy(input, i, input, start + tempIndex, mid - i);
         System.arraycopy(temp, 0, input, start, tempIndex);
     }
-
-
 }
