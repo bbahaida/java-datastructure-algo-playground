@@ -10,7 +10,7 @@ public final class BubbleSort {
     /**
      * private constructor.
      */
-    private BubbleSort(){
+    private BubbleSort() {
 
     }
 

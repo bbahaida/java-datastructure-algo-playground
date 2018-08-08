@@ -10,9 +10,9 @@ import java.util.Queue;
  */
 public final class Braille {
 
-    private final static int BRAILLE_LENGTH = 6;
-    private final static int BRAILLE_RANGE_2_INDEX = 2;
-    private final static int BRAILLE_RANGE_3_INDEX = 5;
+    private static final int BRAILLE_LENGTH = 6;
+    private static final int BRAILLE_RANGE_2_INDEX = 2;
+    private static final int BRAILLE_RANGE_3_INDEX = 5;
 
     /**
      * private constructor.
@@ -46,18 +46,18 @@ public final class Braille {
      */
 
     private static void decode(final String braille) {
-        if(braille.length()%BRAILLE_LENGTH != 0) {
+        if (braille.length()%BRAILLE_LENGTH != 0) {
             System.err.println("error");
             return;
         }
         List<String> data = new ArrayList<>();
-        for (int i = BRAILLE_LENGTH; i<=braille.length(); i+=BRAILLE_LENGTH) {
+        for (int i = BRAILLE_LENGTH; i <= braille.length(); i += BRAILLE_LENGTH) {
             data.add(braille.substring(i - BRAILLE_LENGTH, i));
         }
         StringBuilder word = new StringBuilder();
         for (String e: data) {
             char convertedChar = fromBrailleToAlphabet(e);
-            if(convertedChar == '0'){
+            if (convertedChar == '0'){
                 System.err.println("error");
                 return;
             }
@@ -79,11 +79,11 @@ public final class Braille {
         if (braille.length() != BRAILLE_LENGTH) {
             return '0';
         }
-        if (braille.equals("-*-***") ) {
+        if (braille.equals("-*-***")) {
             return 'w';
         }
-        if(braille.charAt(BRAILLE_RANGE_2_INDEX) == '*') {
-            if(braille.charAt(BRAILLE_RANGE_3_INDEX) == '*') {
+        if (braille.charAt(BRAILLE_RANGE_2_INDEX) == '*') {
+            if (braille.charAt(BRAILLE_RANGE_3_INDEX) == '*') {
                 switch (braille) {
                     case "*-*--*" :
                         return 'u';
@@ -98,7 +98,7 @@ public final class Braille {
                     default: return '0';
                 }
             } else {
-                switch (braille){
+                switch (braille) {
                     case "*-*---" :
                         return 'k';
                     case "***---" :

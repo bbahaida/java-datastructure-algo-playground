@@ -25,8 +25,8 @@ public final class ShellSort {
                 int newElement = arr[i];
                 int j = i;
                 while (j >= gap && arr[j - gap] > newElement) {
-                    arr[j] = arr[j-gap];
-                    j-=gap;
+                    arr[j] = arr[j - gap];
+                    j -= gap;
                 }
                 arr[j] = newElement;
             }

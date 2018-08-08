@@ -1,7 +1,13 @@
 package utils;
 
+/**
+ * @author Brahim Bahaida
+ */
 public final class Utils {
 
+    /**
+     * private constructor.
+     */
     private Utils() {
 
     }

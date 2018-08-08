@@ -30,8 +30,9 @@ public final class MergeSort {
      */
 
     private static void partitionPhase(final int[] input, final int start, final int end) {
-        if(end - start < 2)
+        if(end - start < 2) {
             return;
+        }
         int mid = (start+end)/2;
         partitionPhase(input, start, mid);
         partitionPhase(input, mid, end);

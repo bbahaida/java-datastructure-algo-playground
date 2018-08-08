@@ -5,6 +5,8 @@ package performence;
  */
 public final class Timeit {
 
+    private static final double TIMER_DIVIDER = 1.0e9;
+
     /**
      *
      * @param block code to be executed
@@ -17,7 +19,7 @@ public final class Timeit {
             block.run();
         } finally {
             long end = System.nanoTime();
-            return (end-start)/1.0e9;
+            return (end - start) / TIMER_DIVIDER;
         }
     }
 
