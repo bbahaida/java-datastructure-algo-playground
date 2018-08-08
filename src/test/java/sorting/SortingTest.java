@@ -1,7 +1,6 @@
 package sorting;
 
-import Performence.Timeit;
-import org.junit.Before;
+import performence.Timeit;
 import org.junit.Test;
 
 import static org.junit.Assert.*;

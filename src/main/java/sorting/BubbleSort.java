@@ -1,14 +1,21 @@
 package sorting;
 
-import Utils.Utils;
+import utils.Utils;
 
 public class BubbleSort {
-    // stable O(n^2)
+
+    private BubbleSort(){
+
+    }
+
+
     /**
      *
      * @param arr
      * @return
      */
+
+    // stable O(n^2)
     public static int[] bubbleSort(final int[] arr) {
 
         for (int i = arr.length - 1; i >= 0; i--) {

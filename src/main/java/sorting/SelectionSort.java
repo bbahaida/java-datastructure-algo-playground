@@ -1,13 +1,19 @@
 package sorting;
 
-import Utils.Utils;
+import utils.Utils;
 
 public class SelectionSort {
+
+    private SelectionSort(){
+
+    }
+
     /**
      *
      * @param arr
      * @return
      */
+
     // unstable O(n^2) better than bubble because of the number of swaps
     public static int[] selectionSort(final int [] arr){
         int index;

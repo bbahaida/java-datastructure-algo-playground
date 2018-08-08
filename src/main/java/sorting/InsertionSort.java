@@ -1,11 +1,17 @@
 package sorting;
 
 public class InsertionSort {
+
+    private InsertionSort(){
+
+    }
+
     /**
      *
      * @param arr
      * @return
      */
+
     // stable O(n^2)
     public static int[] insertionSort(final int[] arr){
         for (int i=1; i<arr.length; i++){

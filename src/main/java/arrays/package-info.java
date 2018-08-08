@@ -1,4 +1,4 @@
 /**
  *  @author Brahim Bahaida
  */
-package Utils;
+package arrays;

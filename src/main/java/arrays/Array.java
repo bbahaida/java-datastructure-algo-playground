@@ -1,11 +1,13 @@
-package Arrays;
+package arrays;
 
 public class Array {
+
     /**
      *
      * @param args
      */
-    public static void main(String[] args) {
+
+    public static void main(final String[] args) {
         int[] array = {20,35,-15,7,55,1,-22};
 
         /*System.out.println("Bubble Sort");
@@ -24,6 +26,10 @@ public class Array {
 
 
         System.out.println("###########################");*/
+
+    }
+
+    private Array(){
 
     }
 

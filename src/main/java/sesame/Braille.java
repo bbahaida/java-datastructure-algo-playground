@@ -6,11 +6,21 @@ import java.util.PriorityQueue;
 import java.util.Queue;
 
 public class Braille {
+
+    private final static int BRAILLE_LENGTH = 6;
+    private final static int BRAILLE_RANGE_2_INDEX = 2;
+    private final static int BRAILLE_RANGE_3_INDEX = 5;
+
+    private Braille(){
+
+    }
+
     /**
      *
      * @param args
      */
-    public static void main(String[] args) {
+
+    public static void main(final String[] args) {
         String braille = "**----***-*-*-----**--*--*-*--*-**--";
         decode(braille);
     }
@@ -28,14 +38,15 @@ public class Braille {
      * @param braille
      *
      */
+
     private static void decode(final String braille){
-        if(braille.length()%6 != 0){
+        if(braille.length()%BRAILLE_LENGTH != 0){
             System.err.println("error");
             return;
         }
         List<String> data = new ArrayList<>();
-        for (int i = 6; i<=braille.length(); i+=6){
-            data.add(braille.substring(i - 6, i));
+        for (int i = BRAILLE_LENGTH; i<=braille.length(); i+=BRAILLE_LENGTH){
+            data.add(braille.substring(i - BRAILLE_LENGTH, i));
         }
         StringBuilder word = new StringBuilder();
         for (String e: data) {
@@ -57,15 +68,16 @@ public class Braille {
      * @param braille
      * @return braille corresponded char
      */
+
     private static char fromBrailleToAlphabet(final String braille){
-        if (braille.length() != 6) {
+        if (braille.length() != BRAILLE_LENGTH) {
             return '0';
         }
         if (braille.equals("-*-***") ) {
             return 'w';
         }
-        if(braille.charAt(2) == '*'){
-            if(braille.charAt(5) == '*'){
+        if(braille.charAt(BRAILLE_RANGE_2_INDEX) == '*'){
+            if(braille.charAt(BRAILLE_RANGE_3_INDEX) == '*'){
                 switch (braille){
                     case "*-*--*" :
                         return 'u';
