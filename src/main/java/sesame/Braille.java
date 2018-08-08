@@ -62,7 +62,9 @@ public final class Braille {
             return;
         }
         List<String> data = new ArrayList<>();
-        for (int i = BRAILLE_LENGTH; i <= braille.length(); i += BRAILLE_LENGTH) {
+        for (int i = BRAILLE_LENGTH;
+             i <= braille.length();
+             i += BRAILLE_LENGTH) {
             data.add(braille.substring(i - BRAILLE_LENGTH, i));
         }
         StringBuilder word = new StringBuilder();
