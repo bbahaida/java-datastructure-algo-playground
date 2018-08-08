@@ -5,6 +5,9 @@ package performence;
  */
 public final class Timeit {
 
+    /**
+     * JavaDoc Comment :p.
+     */
     private static final double TIMER_DIVIDER = 1.0e9;
 
     /**

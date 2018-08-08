@@ -2,16 +2,27 @@ package sesame;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.PriorityQueue;
-import java.util.Queue;
 
 /**
  * @author Brahim Bahaida
  */
 public final class Braille {
+    /**
+     * Length of the character.
+     */
 
     private static final int BRAILLE_LENGTH = 6;
+
+    /**
+     * Braille detector for range 2.
+     */
+
     private static final int BRAILLE_RANGE_2_INDEX = 2;
+
+    /**
+     * Braille detector for range 3.
+     */
+
     private static final int BRAILLE_RANGE_3_INDEX = 5;
 
     /**
@@ -46,7 +57,7 @@ public final class Braille {
      */
 
     private static void decode(final String braille) {
-        if (braille.length()%BRAILLE_LENGTH != 0) {
+        if (braille.length() % BRAILLE_LENGTH != 0) {
             System.err.println("error");
             return;
         }
@@ -57,7 +68,7 @@ public final class Braille {
         StringBuilder word = new StringBuilder();
         for (String e: data) {
             char convertedChar = fromBrailleToAlphabet(e);
-            if (convertedChar == '0'){
+            if (convertedChar == '0') {
                 System.err.println("error");
                 return;
             }

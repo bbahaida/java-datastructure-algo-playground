@@ -30,7 +30,7 @@ public final class SelectionSort {
                     index = j;
                 }
             }
-            Utils.swap(arr,i,index);
+            Utils.swap(arr, i, index);
         }
 
         return arr;
