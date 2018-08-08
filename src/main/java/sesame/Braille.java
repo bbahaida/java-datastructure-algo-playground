@@ -6,6 +6,10 @@ import java.util.PriorityQueue;
 import java.util.Queue;
 
 public class Braille {
+    /**
+     *
+     * @param args
+     */
     public static void main(String[] args) {
         String braille = "**----***-*-*-----**--*--*-*--*-**--";
         decode(braille);
@@ -18,7 +22,13 @@ public class Braille {
        # *-----
 
      */
-    private static void decode(String braille){
+
+    /**
+     *
+     * @param braille
+     *
+     */
+    private static void decode(final String braille){
         if(braille.length()%6 != 0){
             System.err.println("error");
             return;
@@ -42,9 +52,18 @@ public class Braille {
     }
 
 
-    private static char fromBrailleToAlphabet(String braille){
-        if (braille.length() != 6) return '0';
-        if (braille.equals("-*-***") ) return 'w';
+    /**
+     *
+     * @param braille
+     * @return braille corresponded char
+     */
+    private static char fromBrailleToAlphabet(final String braille){
+        if (braille.length() != 6) {
+            return '0';
+        }
+        if (braille.equals("-*-***") ) {
+            return 'w';
+        }
         if(braille.charAt(2) == '*'){
             if(braille.charAt(5) == '*'){
                 switch (braille){

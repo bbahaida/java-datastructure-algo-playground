@@ -2,7 +2,12 @@ package Performence;
 
 public class Timeit {
 
-    public static double code(Runnable block){
+    /**
+     *
+     * @param block
+     * @return Time of execution
+     */
+    public static double code(final Runnable block){
         long start = System.nanoTime();
         try{
             block.run();

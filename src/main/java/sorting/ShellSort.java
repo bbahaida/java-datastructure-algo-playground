@@ -1,7 +1,12 @@
 package sorting;
 
 public class ShellSort {
-    public static int[] shellsort(int[] arr){
+    /**
+     *
+     * @param arr
+     * @return
+     */
+    public static int[] shellsort(final int[] arr){
 
         for (int gap = arr.length / 2; gap > 0; gap /= 2){
 

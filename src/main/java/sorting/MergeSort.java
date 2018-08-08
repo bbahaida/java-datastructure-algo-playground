@@ -2,12 +2,23 @@ package sorting;
 
 public class MergeSort {
 
-    public static int[] mergeSort(int[] arr) {
+    /**
+     *
+     * @param arr
+     * @return
+     */
+    public static int[] mergeSort(final int[] arr) {
         partitionPhase(arr, 0, arr.length);
         return arr;
     }
 
-    private static void partitionPhase(int[] input, int start, int end){
+    /**
+     *
+     * @param input
+     * @param start
+     * @param end
+     */
+    private static void partitionPhase(final int[] input, final int start, final int end){
         if(end - start < 2)
             return;
         int mid = (start+end)/2;
@@ -15,7 +26,7 @@ public class MergeSort {
         partitionPhase(input, mid, end);
         mergePhase(input, start, mid, end);
     }
-    private static void mergePhase(int[] input, int start, int mid, int end){
+    private static void mergePhase(final int[] input, final int start, final int mid, final int end){
         if(input[mid - 1] <= input[mid])
             return;
         int i = start;
