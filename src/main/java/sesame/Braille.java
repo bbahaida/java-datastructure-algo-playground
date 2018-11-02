@@ -32,34 +32,18 @@ public final class Braille {
 
     }
 
+
     /**
      *
-     * @param args from user
-     */
-
-    public static void main(final String[] args) {
-        String braille = "**----***-*-*-----**--*--*-*--*-**--";
-        decode(braille);
-    }
-
-    /*
-       # **----***-*-*-----**--*--*-*--*-**--
-       # *-----**----*--*--**-*--
-       # -*-****---*-***--**-----
-       # *-----
-
-     */
-
-    /**
      *
      * @param braille to decode
      *
      */
 
-    private static void decode(final String braille) {
+    public static String decode(final String braille) {
         if (braille.length() % BRAILLE_LENGTH != 0) {
-            System.err.println("error");
-            return;
+            //System.err.println("error");
+            throw new RuntimeException("Braille sequence should be divided by " + BRAILLE_LENGTH);
         }
         List<String> data = new ArrayList<>();
         for (int i = BRAILLE_LENGTH;
@@ -71,13 +55,13 @@ public final class Braille {
         for (String e: data) {
             char convertedChar = fromBrailleToAlphabet(e);
             if (convertedChar == '0') {
-                System.err.println("error");
-                return;
+                //System.err.println("error");
+                throw new RuntimeException("An error has occurred during the decoding phase");
             }
 
             word.append(convertedChar);
         }
-        System.out.print(word.toString());
+        return word.toString();
 
     }
 
