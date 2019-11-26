@@ -1,10 +1,11 @@
 package sorting;
 
+
+import org.junit.jupiter.api.Test;
 import performence.Timeit;
-import org.junit.Test;
 
-import static org.junit.Assert.*;
-
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class SortingTest {
 
